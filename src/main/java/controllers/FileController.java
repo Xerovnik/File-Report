@@ -118,6 +118,7 @@ public class FileController {
         System.out.println("File Count: " + fileCount);
         System.out.println("Sub Folder Count: " + directoryCount);
         System.out.println("--------------------------------------------------------------------------");
+        extensions.clear();
 
 
         while(it.hasNext()){

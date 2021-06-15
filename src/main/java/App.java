@@ -1,5 +1,9 @@
 import controllers.FileController;
+import recipecards.ActionableLogic;
 
+import javax.swing.*;
+import javax.swing.plaf.synth.SynthScrollPaneUI;
+import java.io.File;
 import java.util.Scanner;
 
 public class App {
@@ -38,6 +42,7 @@ public class App {
         System.out.println("2) Exit");
         System.out.println("3) print folder objects");
         System.out.println("4) Add managed directory");
+        System.out.println("5) Delete A Directory");
     }
 
 
@@ -54,8 +59,8 @@ public class App {
 
 
         Scanner input =  new Scanner(System.in);
-        Scanner directory = new Scanner(System.in);
-
+        //Scanner directory = new Scanner(System.in);
+        ActionableLogic test = new ActionableLogic();
 
 
 
@@ -68,33 +73,67 @@ public class App {
             switch (option) {
                 case 1:
                     fileController.mainFunction();
+                    System.out.println("       ***********************************************************************");
+                    System.out.println("       *                      Scroll up to see output                        *");
+                    System.out.println("       ***********************************************************************");
                     break;
                 case 2:
-                    System.out.println("Powering Down!");
+                    System.out.println("");
+                    System.out.println("       ***********************************************************************");
+                    System.out.println("       *                      How Could you?.. Goodbye Crewel world          *");
+                    System.out.println("       ***********************************************************************");
                     power = false;
+                    input.close();
                     break;
                 case 3:
                     fileController.printFileCabinet();
+                    System.out.println("       ***********************************************************************");
+                    System.out.println("       *                      Scroll up to see output                        *");
+                    System.out.println("       ***********************************************************************");
                     break;
                 case 4:
 
-                    System.out.println("Please input the directory path.");
+                    JFileChooser fc = new JFileChooser();
+                    fc.setMultiSelectionEnabled(false);
 
-                    String dPath = directory.nextLine();
-                    fileController.addManagedFolder(dPath);
-
-                    System.out.println("Adding path to managed Directories!...");
-                    //menuPathAdd();
-                        break;
+                    fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                    int returnVal = fc.showOpenDialog(null);
+                    if(returnVal == JFileChooser.APPROVE_OPTION){
+                        File file = fc.getSelectedFile();
+                        String dPath = file.getAbsolutePath();
+                        fileController.addManagedFolder(dPath);
+                        System.out.println("Adding \"" + dPath + "\" to managed Directories!...");
+                    }else{
+                        System.out.println("       ***********************************************************************");
+                        System.out.println("       *                      Beep.. Boop... Aborting!                       *");
+                        System.out.println("       ***********************************************************************");
 
                     }
-            System.out.println("****************************");
-            System.out.println("* Scroll up to see output *");
+
+
+
+
+                        break;
+
+                case 5:
+                    System.out.println("Please input the directory path.");
+                    Scanner deleteMe = new Scanner(System.in);
+                    String toDelete = deleteMe.nextLine();
+                    test.delete(toDelete);
+                    deleteMe.close();
+                    System.out.println("The Directory Has Been Destroyed! You Monster!");
+                    break;
+
+                case 6:
+
+
+                    break;
+
+                    }
+
             banner();
             }
-            //System.out.println("****************************");
-            //System.out.println("* Scroll up to see output *");
-            //banner();
+
 
         }
 

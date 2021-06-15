@@ -1,0 +1,38 @@
+This section describes Condition Action Design.
+
+Condition Action is where you define a condition and if that condition is is satisfied an action takes place.
+
+
+what follows will be my musings on how this might best be accomplished.
+
+
+I think that the best way to do this is to break actions and conditions down into the smallest possible actions and then
+figure out how to chain these actions to accomplish the desired effect.
+
+Lets start with file movement. and it's triggers.
+
+first we will start with time based triggers. what kind of timed based triggers would be useful to people.
+
+perhaps the most obvious action would be for the files of a folder to be moved after a certain period of time passes
+
+Lets lay out the steps for this to take place.
+
+1) establish a managed directory.
+2) create the ability for each directory to have Actions and triggers applied to them.
+3) track the triggers and actions such that they are executed when they need to be. this is an interesting problem and one im not sure how best to tackle
+the problem.
+
+
+1.2) let's break down these steps into smaller steps
+
+the first step is more or less done, providing I don't need to modify it to accommodate later code.
+
+2.2) Step 2 I think will best be added into the Directory blue print.  I will likely have to write an "actions file" with all the different methods
+that can possibly be carried out then perhaps create a hashSet of calls to these methods. for each of the directories in the managed directories
+hashset I will run some code that checks that directories triggers and if the conditions of that directories triggers are satisfied it will execute it.
+
+3.2) my idea in 2.2 may actually take care of this step!
+
+
+Note- I have decided that the action trigger patterns need to be objects unto themselves that way they can be saved and reapplied to other places
+they are needed as the user sees fit.
