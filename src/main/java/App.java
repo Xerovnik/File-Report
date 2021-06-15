@@ -2,7 +2,6 @@ import controllers.FileController;
 import recipecards.ActionableLogic;
 
 import javax.swing.*;
-import javax.swing.plaf.synth.SynthScrollPaneUI;
 import java.io.File;
 import java.util.Scanner;
 
