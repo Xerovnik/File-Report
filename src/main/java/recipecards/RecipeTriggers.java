@@ -2,6 +2,7 @@ package recipecards;
 
 public interface RecipeTriggers {
 
+
     //Triggers - triggers are events that set in motion our recipe chain!
 
     public void newFileDetected(); // trigger if new file detected at location. (String *I THINK*)

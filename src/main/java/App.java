@@ -119,14 +119,12 @@ public class App {
                     Scanner deleteMe = new Scanner(System.in);
                     String toDelete = deleteMe.nextLine();
                     test.delete(toDelete);
-                    deleteMe.close();
+
                     System.out.println("The Directory Has Been Destroyed! You Monster!");
+                    //deleteMe.close();
                     break;
 
-                case 6:
 
-
-                    break;
 
                     }
 

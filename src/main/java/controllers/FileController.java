@@ -59,7 +59,17 @@ public class FileController {
 
     public void printFileCabinet(){
         for(FileBluePrint blue: fileCabinet){
-            System.out.println(blue); // look into printing formatted string for readability
+            System.out.println(
+                            "Name: " + blue.getName() + "\n" +
+                            "Type: " + "." + blue.getFileType() + "\n" +
+                            "Location: " + blue.getLocation() + "\n" +
+                            "Created: " + blue.getCreated() + "\n" +
+                            "Last Modified: " + blue.getModified() + "\n" +
+                            "Last Accessed: " + blue.getAccessed() + "\n" +
+                            "Size: " + blue.getSize()); // look into printing formatted string for readability
+            System.out.println("");
+            System.out.println("");
+            System.out.println("-------------------------------------------------------------------------------------");
         }
 
     }
@@ -126,6 +136,8 @@ public class FileController {
         }
 
     }
+
+
 
 
 

@@ -7,6 +7,9 @@ public class TriggerLogic implements RecipeTriggers {
         //the contents of an old scan to a new scan
     }
 
+
+
+
     @Override
     public void interval() {
 
@@ -14,7 +17,7 @@ public class TriggerLogic implements RecipeTriggers {
 
     @Override
     public void atTime() {
-
+            System.out.println("");
     }
 
     @Override
