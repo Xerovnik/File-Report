@@ -49,10 +49,11 @@ public class App {
         final FileController fileController = new FileController();
 
         fileController.addManagedFolder("C:\\Users\\17404\\Documents");
-        fileController.addManagedFolder("C:\\Users\\17404\\Documents\\My Games" +
-                "");
+
+        fileController.addManagedFolder("C:\\Users\\17404\\Documents\\My Games");
 
         fileController.addManagedFolder("C:\\Users\\17404\\Pictures\\Comand-line-BG");
+
         fileController.addManagedFolder("C:\\Users\\17404\\Downloads");
 
 
@@ -67,6 +68,7 @@ public class App {
 
         boolean power = true;
 
+
         while(power) {
             int option = input.nextInt();
             switch (option) {
@@ -77,7 +79,7 @@ public class App {
                     System.out.println("       ***********************************************************************");
                     break;
                 case 2:
-                    System.out.println("");
+                    System.out.println();
                     System.out.println("       ***********************************************************************");
                     System.out.println("       *                      How Could you?.. Goodbye Crewel world          *");
                     System.out.println("       ***********************************************************************");
