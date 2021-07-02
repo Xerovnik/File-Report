@@ -29,7 +29,7 @@ public interface RecipeTriggers {
 
     public void ifSize(); //Trigger if a file size is X size greater / smaller (Long)
 
-    public void nameMatch(); //Trigger if file / folder name matches
+    void nameMatch(); //Trigger if file / folder name matches
 
     public void noMatch(); //Trigger if no file / folder match
 

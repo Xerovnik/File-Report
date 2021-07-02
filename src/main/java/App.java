@@ -7,9 +7,12 @@ import java.util.Scanner;
 
 public class App {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
 
          final FileController fileController = new FileController();
+
+
+
 
          //fileController.addManagedFolder("C:\\Users\\17404\\Pictures\\Comand-line-BG");
          //fileController.addManagedFolder("C:\\Users\\17404\\Downloads");
@@ -87,6 +90,7 @@ public class App {
                     input.close();
                     break;
                 case 3:
+                    //this needs to have an option to print just the objects of a particular managed folder.
                     fileController.printFileCabinet();
                     System.out.println("       ***********************************************************************");
                     System.out.println("       *                      Scroll up to see output                        *");

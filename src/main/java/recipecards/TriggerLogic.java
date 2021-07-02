@@ -12,7 +12,7 @@ public class TriggerLogic implements RecipeTriggers {
 
     @Override
     public void interval() {
-
+//this will probably be removed and handled by the TriggerCards class.
     }
 
     @Override
