@@ -17,6 +17,10 @@ public interface RecipeTriggers {
 
     public void numberOfFiles(); //Trigger action if number of files meets a certain threshold. (int)
 
+    void filesLessOrEqualTo(); //Trigger if the number files are less than or equal to a given number (int)
+
+    void filesGreaterOrEqualTo(); //Trigger if the number of files are greater or equal to a given number (int)
+
     public void ifFileType(); //Trigger if File passed is of a particular type. (boolean)
 
     public void onIncrease(); //Trigger if number of files / folders increases (int)

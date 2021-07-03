@@ -1,6 +1,15 @@
 
 
+what do i need to do to make the recipes work?
 
-#program starts
+1 I need to have managed directories, and i need the user to be able to assign mutiple recipes to each directory.
 
-#program is fed
+Solution: upon adding a managed Directory create a new directory object, this object and have an ArrayList that can have
+recipes added to it. I will have a timer that runs a function that checks each directory object and check that objects
+trigger conditions
+
+2 I need to be able to create new recipes and store them, and then assign them to a directory.
+
+Solution: I can have a menu that creates a Map with the recipe name, and the functions that need called
+
+3 I need to be able to loop through all the managed directories and check to see if any recipes need triggered

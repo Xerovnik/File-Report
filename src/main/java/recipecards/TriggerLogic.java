@@ -13,6 +13,7 @@ public class TriggerLogic implements RecipeTriggers {
     @Override
     public void interval() {
 //this will probably be removed and handled by the TriggerCards class.
+        System.out.println("interval will not be used!");
     }
 
     @Override
@@ -32,6 +33,16 @@ public class TriggerLogic implements RecipeTriggers {
 
     @Override
     public void numberOfFiles() {
+
+    }
+
+    @Override
+    public void filesLessOrEqualTo(){
+
+    }
+
+    @Override
+    public void filesGreaterOrEqualTo(){
 
     }
 

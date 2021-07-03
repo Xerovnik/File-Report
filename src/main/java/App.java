@@ -1,26 +1,23 @@
 import controllers.FileController;
 import recipecards.ActionableLogic;
+import recipecards.CardBox;
+import recipecards.TriggerCard;
 
 import javax.swing.*;
 import java.io.File;
 import java.util.Scanner;
+import java.util.Timer;
 
 public class App {
 
     public static void main(String[] args){
 
-         final FileController fileController = new FileController();
+         //final FileController fileController = new FileController();
 
 
 
-
-         //fileController.addManagedFolder("C:\\Users\\17404\\Pictures\\Comand-line-BG");
-         //fileController.addManagedFolder("C:\\Users\\17404\\Downloads");
-        //fileController.addManagedFolder("C:\\Users\\17404\\Documents");
-
-         //fileController.createList();
         banner();
-        //fileController.mainFunction();
+
         menu();
 
 
@@ -45,6 +42,7 @@ public class App {
         System.out.println("3) print folder objects");
         System.out.println("4) Add managed directory");
         System.out.println("5) Delete A Directory");
+        System.out.println("6) Create New Recipe");
     }
 
 
@@ -64,6 +62,12 @@ public class App {
         Scanner input =  new Scanner(System.in);
         //Scanner directory = new Scanner(System.in);
         ActionableLogic test = new ActionableLogic();
+
+        final TriggerCard triggerCard = new TriggerCard();
+
+
+        Timer timer = new Timer();
+        timer.schedule(triggerCard, 1, 60000);
 
 
 
@@ -88,6 +92,7 @@ public class App {
                     System.out.println("       ***********************************************************************");
                     power = false;
                     input.close();
+                    timer.cancel();
                     break;
                 case 3:
                     //this needs to have an option to print just the objects of a particular managed folder.
@@ -130,6 +135,9 @@ public class App {
                     //deleteMe.close();
                     break;
 
+                case 6:
+                    CardBox cardBox = new CardBox();
+                    cardBox.createNewRecipe();
 
 
                     }
@@ -139,6 +147,10 @@ public class App {
 
 
         }
+
+
+
+
 
 
 
