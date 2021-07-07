@@ -13,3 +13,4 @@ trigger conditions
 Solution: I can have a menu that creates a Map with the recipe name, and the functions that need called
 
 3 I need to be able to loop through all the managed directories and check to see if any recipes need triggered
+
